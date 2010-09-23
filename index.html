@@ -1,0 +1,30 @@
+---
+layout: default
+title: faix divers
+---
+
+{% assign show_count = 5 %}
+
+{% for post in site.posts %}
+
+  <h1>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+    <span>
+      {% capture day %}{{ post.date | date: "%d" }}{% endcapture %}
+      {% capture month %}{{ post.date | date: "%b" | downcase }}{% endcapture %}
+      {% capture smonth %}{% case month %}{% when 'jan' %}ja{% when 'feb' %}fe{% when 'mar' %}mr{% when 'apr' %}al{% when 'may' %}ma{% when 'jun' %}jn{% when 'jul' %}jl{% when 'aug' %}au{% when 'sep' %}se{% when 'oct' %}se{% when 'nov' %}no{% when 'dec' %}de{% endcase %}{% endcapture %}
+      {{ smonth }}{{ day }}
+    </span>
+  </h1>
+
+  {% if forloop.index <= show_count %}
+    <p>{{ post.desc}} &mdash;
+      <a href="{{ post.url }}">Lire la suite &rarr;</a>
+    </p>
+  {% endif %}
+
+{% endfor %}
+    <h1><a href="archives.html">Voir les archives</a> <span>∞</span></h1>
+
+  <h1 class="section">À propos</h1>
+  <p>Suivez-moi sur Twitter <a href="http://twitter.com/jmlacroix">@jmlacroix</a>, lisez mon code sur <a href="http://github.com/jmlacroix/">GitHub</a> ou contactez-moi à <a href="mailto:jmlacroix chez gmail">jmlacroix chez gmail</a>. Contenu sous license <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.fr_CA">cc by-nc-sa</a>.</p>

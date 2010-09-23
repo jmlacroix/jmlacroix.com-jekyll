@@ -1,0 +1,11 @@
+auto:        false
+lsi:         false
+server_port: 4000
+pygments:    true
+permalink:   /archives/:title.html
+markdown:    rdiscount
+rdiscount:
+  smart:     true
+exclude:     [ s3.config, Rakefile, aws_cf_setroot.rb, aws_cf_sync.rb, aws_cf_invalidate.rb ]
+
+url:         http://jmlacroix.com
