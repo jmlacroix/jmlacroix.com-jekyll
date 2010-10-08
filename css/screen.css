@@ -1,13 +1,13 @@
 body {
-	width: 550px;
+	width: 650px;
 	margin-left: auto;
 	margin-right: auto;
 	padding-bottom: 1em;
 	padding-top: 1em;
-	text-align: justify;
 
 	font-family: 'Helvetica Neue';
-	font-size: 14px;
+	font-weight: 300;
+	font-size: 15px;
 	line-height: 24px;
 }
 
@@ -15,11 +15,11 @@ body {
 h1, h2, h3, h4, h5 {
 	font-weight: normal;
 	margin-bottom: 0.2em;
-	font-family: Georgia, serif;
+	font-family: georgia, serif;
 }
 
 h1 {
-	font-size: 170%;
+	font-size: 160%;
 	margin-top: 1.0em;
 }
 
@@ -31,6 +31,15 @@ h1 span {
 	float: right;
 	color: #d0d0d0;
 	font-size: 90%;
+}
+
+h1 {
+	padding-bottom: 5px;
+	border-bottom: 1px solid #d0d0d0;
+}
+
+h1 a {
+	color: black;
 }
 
 h1 + h1 {
@@ -45,10 +54,12 @@ a {
 	text-decoration: none;
 }
 
+a:visited {
+}
+
 a:hover {
 	text-decoration: underline;
 }
-
 
 div.logo {
 	float: left;
@@ -101,6 +112,10 @@ div.gist-file .line {
 	line-height: 15px;
 }
 
+div.gist-meta {
+	font-size: 80% !important;
+}
+
 div.footnotes {
 	margin-top: 4em;
 	font-size: 85%;
@@ -109,4 +124,9 @@ div.footnotes {
 
 div.footnotes ol {
 	margin-right: 2em;
+}
+
+pre {
+	font-family: 'Menlo' !important;
+	font-size: 75%;
 }
