@@ -2,3 +2,5 @@ _drafts
 _site
 s3.config
 .DS_Store
+aws_cf_invalidate.rb
+aws_cf_sync.rb
