@@ -129,4 +129,68 @@ div.footnotes ol {
 pre {
 	font-family: 'Menlo' !important;
 	font-size: 75%;
+	line-height: 1.5em;
 }
+
+/* syntax highlight */
+
+.lnr { color: #8a8a8a; background-color: #e4e4e4; font-weight: bold; }
+.rubySymbol { color: #870087; }
+.FoldeColumn { color: #767676; background-color: #e4e4e4; font-weight: bold; }
+.vimFold { color: #767676; background-color: #e4e4e4; font-weight: bold; }
+.Cursor { color: #ffffff; background-color: #00005f; }
+.Normal { color: #000000; background-color: #ffffff; }
+.Typedef { color: #000000; font-weight: bold; }
+.Structure { color: #000000; font-weight: bold; }
+.StorageClass { color: #000000; font-weight: bold; }
+.Label { color: #000000; font-weight: bold; }
+.Function { color: #870000; font-weight: bold; }
+.Number { color: #008787; }
+.String { color: #d70000; }
+.Todo { color: #ff0000; background-color: #ffffff; text-decoration: underline; }
+.Error { color: #ff0000; background-color: #ffffff; }
+.Ignore { color: #767676; }
+.Underlined { color: #000000; text-decoration: underline; }
+.Type { color: #005f87; font-weight: bold; }
+.PreProc { color: #949494; font-weight: bold; }
+.Statement { color: #000000; font-weight: bold; }
+.Identifier { color: #0087af; }
+.Special { color: #008700; font-weight: bold; }
+.Constant { color: #008787; }
+.Comment { color: #878787; font-style: italic; }
+.MatchParen { color: #000000; background-color: #d7d7ff; }
+.ColorColumn { background-color: #ffd7d7; }
+.CursorLine { background-color: #d0d0d0; }
+.CursorColumn { background-color: #d7d7ff; }
+.TabLineFill { color: #3a3a3a; background-color: #d0d0d0; }
+.TabLineSel { color: #3a3a3a; font-weight: bold; }
+.TabLine { color: #3a3a3a; background-color: #d0d0d0; }
+.PmenuThumb { color: #9e9e9e; background-color: #9e9e9e; }
+.PmenuSbar { color: #3a3a3a; background-color: #000000; }
+.PmenuSel { color: #000000; background-color: #d7d7ff; font-style: italic; }
+.Pmenu { color: #ffffff; background-color: #767676; font-weight: bold; }
+.SignColumn { color: #0000c0; background-color: #a8a8a8; }
+.FoldColumn { color: #767676; background-color: #e4e4e4; font-weight: bold; }
+.Folded { color: #767676; background-color: #e4e4e4; font-weight: bold; }
+.WildMenu { color: #87afff; background-color: #005f87; }
+.WarningMsg { color: #ff5f00; }
+.VisualNOS { color: #ffffff; background-color: #000087; }
+.Visual { color: #ffffff; background-color: #005faf; }
+.Title { color: #ff5f00; }
+.VertSplit { color: #b2b2b2; background-color: #b2b2b2; }
+.StatusLineNC { color: #3a3a3a; background-color: #c6c6c6; font-style: italic; }
+.StatusLine { color: #3a3a3a; background-color: #b2b2b2; font-weight: bold; }
+.Question { color: #008000; }
+.LineNr { color: #8a8a8a; background-color: #e4e4e4; font-weight: bold; }
+.ModeMsg { color: #870000; }
+.MoreMsg { color: #870000; }
+.Search { color: #000000; background-color: #d7d7ff; font-style: italic; }
+.IncSearch { color: #000000; background-color: #d7d7ff; font-style: italic; }
+.ErrorMsg { color: #ffffff; background-color: #c00000; }
+.Directory { color: #870000; }
+.NonText { color: #767676; background-color: #ffffff; }
+.SpecialKey { color: #008787; font-style: italic; }
+.DiffAdd { color: #000000; background-color: #d7ffd7; }
+.DiffChange { background-color: #e4e4e4; }
+.DiffDelete { color: #d7d7d7; background-color: #ffd7d7; }
+.DiffText { color: #000000; background-color: #d7d7ff; }
