@@ -2,13 +2,17 @@
 layout: default
 ---
 
-<h1>{{ page.title }}
-    <span>
-      {% capture day %}{{ page.date | date: "%d" }}{% endcapture %}
-      {% capture month %}{{ page.date | date: "%b" | downcase }}{% endcapture %}
-      {% capture smonth %}{% case month %}{% when 'jan' %}ja{% when 'feb' %}fe{% when 'mar' %}mr{% when 'apr' %}al{% when 'may' %}ma{% when 'jun' %}jn{% when 'jul' %}jl{% when 'aug' %}au{% when 'sep' %}se{% when 'oct' %}se{% when 'nov' %}no{% when 'dec' %}de{% endcase %}{% endcapture %}
-      {{ smonth }}{{ day }}
-    </span>
-</h1>
+<header>
+  <nav><h1><a href="/">jmlacroix</a></h1></nav>
+</header>
+
+<article>
+<header>
+  <h1>{{ page.title }}</h1>
+  <time datetime="{{ page.date | date_to_xmlschema }}" pubdate="pubdate">{{ page.date | date: "%B %d, %Y" }}</time>
+</header>
 
 {{ content }}
+
+
+</article>

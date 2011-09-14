@@ -10,7 +10,7 @@ One thing I hate about Chrome is that each time I download a file it opens a dow
 
 So, out of my anger I created something useful: **Chelf**, a SIMBL plugin that adds a keyboard shortcut to hide the download shelf in Chrome.
 
-Chelf adds an entry in the "Window" menu of Chrome, bound to ⇧⌘X:
+Chelf adds an entry in the "Window" menu of Chrome, bound to CMD-SHIFT-X:
 
 <p style="text-align: center;"><img src="/img/chelf/menu.png"></p>
 

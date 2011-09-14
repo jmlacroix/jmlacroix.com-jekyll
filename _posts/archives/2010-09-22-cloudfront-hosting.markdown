@@ -75,13 +75,14 @@ You are now ready to set your DefaultRootObject by running the script with the n
 index.html is now the default root object (meaning it won't work for subfolders). There may be a small delay before it works, but if you go to yourdomain.com in a web browser, you should be shown your default index.html page.
 
 
-<div class="footnotes">
+<section class="footnotes">
+<p>Footnotes</p>
 <ol>
-<li id="ffn1"><p>That could be fixed with a second bucket with the exact same html files that meta refreshes the page to the correct URL. That's overkill, but it should be good enough for basic SEO. <a href="#fn1" title="Jump back to footnote 1 in the text.">&#8617;</a></p></li>
-<li id="ffn2"><p>You could skip this step, but you need to make sure you override the ACLs every time you update your site. <a href="#fn2" title="Jump back to footnote 2 in the text.">&#8617;</a></p></li>
-<li id="ffn3"><p>Not all DNS providers can do that. I'm currently using namecheap.com which allows it. <a href="#fn3" title="Jump back to footnote 3 in the text.">&#8617;</a></p></li>
+<li id="ffn1">That could be fixed with a second bucket with the exact same html files that meta refreshes the page to the correct URL. That's overkill, but it should be good enough for basic SEO. <a href="#fn1" title="Jump back to footnote 1 in the text.">&#8617;</a></li>
+<li id="ffn2">You could skip this step, but you need to make sure you override the ACLs every time you update your site. <a href="#fn2" title="Jump back to footnote 2 in the text.">&#8617;</a></li>
+<li id="ffn3">Not all DNS providers can do that. I'm currently using namecheap.com which allows it. <a href="#fn3" title="Jump back to footnote 3 in the text.">&#8617;</a></li>
 </ol>
-</div>
+</section>
 
 [1]: #ffn1
 [2]: #ffn2

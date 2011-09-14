@@ -1,136 +1,107 @@
 body {
-	width: 650px;
-	margin-left: auto;
-	margin-right: auto;
-	padding-bottom: 1em;
-	padding-top: 1em;
-
-	font-family: 'Helvetica Neue';
-	font-weight: 300;
-	font-size: 15px;
-	line-height: 24px;
+	width: 30em;
+	margin: auto;
+	font-family: serif;
 }
 
-
-h1, h2, h3, h4, h5 {
+header h1 {
+	font-size: 110%;
 	font-weight: normal;
-	margin-bottom: 0.2em;
-	font-family: georgia, serif;
 }
 
-h1 {
-	font-size: 160%;
-	margin-top: 1.0em;
+article header {
+	margin: 3em 0;
+	text-align: center;
 }
 
-h1.section {
-	margin-top: 1.5em;
+article header img {
+	height: 83px;
+	width: 83px;
 }
 
-h1 span {
-	float: right;
-	color: #d0d0d0;
-	font-size: 90%;
+article header h1 {
+	font-size: 150%;
+	font-weight: bold;
+	margin-bottom: 0;
 }
 
-h1 {
-	padding-bottom: 5px;
-	border-bottom: 1px solid #d0d0d0;
+article header time {
+	font-size: 80%;
 }
 
-h1 a {
-	color: black;
+article p {
+	text-align: justify;
 }
 
-h1 + h1 {
-	margin-top: 0.5em;
+p {
+	line-height: 1.4em;
 }
 
-h2 {
-	margin-top: 1.2em;
+pre {
+	background-color: #fafafa;
+	font-family: monospace;
+	line-height: 1.4em;
+    overflow: auto;
+	margin: 0 -1em;
+	padding: 1em;
 }
 
-a {
+div.gist-highlight {
+	font-size: 75% !important;
+}
+
+code {
+	font-family: monospace;
+}
+
+a:link {
+	color: blue;
 	text-decoration: none;
-}
-
-a:visited {
 }
 
 a:hover {
 	text-decoration: underline;
 }
 
-div.logo {
-	float: left;
-	margin-left: -150px;
-	margin-top: 1.8em;
-	padding: 5px;
-	position: fixed;
-	text-align: center;
-	font-family: georgia;
-	font-size: 132%;
-}
-
-div.logo:hover {
-	background-color: #f0f0f0;
-}
-
-div.logo a {
-	color: black;
-}
-
-div.logo a:first-child:hover {
+a:visited {
+	color: #800080;
 	text-decoration: none;
 }
 
-div.logo a p {
-	margin: 0;
+ul li, ol li {
+	line-height: 1.4em;
 }
 
-div.logo img {
-	margin-bottom: 0;
+h2 {
+	font-size: 100%;
+	margin-top: 2em;
 }
 
-div.logo img+p {
-	font-size: 90%;
-	margin-top: -7px;
-}
-
-p.excerpt {
-	font-style: italic;
+.footnotes {
+	margin-top: 3em;
 	font-size: 90%;
 }
 
-pre {
-	background: #f0f0f0;
-	padding: 5px 10px 5px 10px;
-	font-size: 90%;
+.footnotes ol {
+	padding-left: 1.3em;
 }
 
-div.gist-file .line {
-	line-height: 15px;
+.footnotes ol li {
+	line-height: 1.4em;
+	margin-bottom: 0.5em;
 }
 
-div.gist-meta {
-	font-size: 80% !important;
+.footnotes p {
+	font-weight: bold;
 }
 
-div.footnotes {
-	margin-top: 4em;
-	font-size: 85%;
-	border-top: 1px solid black;
+footer {
+	text-align: center;
+	font-size: 80%;
+	margin-top: 1em;
+	padding-top: 1em;
 }
 
-div.footnotes ol {
-	margin-right: 2em;
-}
-
-pre {
-	font-family: 'Menlo' !important;
-	font-size: 75%;
-	line-height: 1.5em;
-}
 
 /* syntax highlight */
 

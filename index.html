@@ -3,28 +3,34 @@ layout: default
 title: homepage
 ---
 
-{% assign show_count = 10 %}
+<article>
+<header>
+  <img src="img/logo.png" />
+  <h1>Jean-Michel Lacroix</h1>
+  <time datetime="2009-10-22" pubdate="pubdate">Developer, and more</time>
+</header>
 
+<p>I'm a developer who loves to program and works in a company. I love technology, products and stuff. Yeah.</p>
+
+<h2>Online</h2>
+
+<p style="margin-left: 1em">
+<a href="mailto:jmlacroix">Gmail</a>,
+<a href="http://twitter.com/jmlacroix">Twitter</a>,
+<a href="http://github.com/jmlacroix">Github</a>,
+<a href="http://linkedin.com/in/jmlacroix">Linked In</a>,
+<a href="http://facebook.com/jmlacroix">Facebook</a>,
+<a href="https://profiles.google.com/115865031921783226017">Google+</a>
+</p>
+
+<h2>Articles</h2>
+
+<ul>
 {% for post in site.posts %}
-
-  <h1>
-    <a href="{{ post.url }}">{{ post.title }}</a>
-    <span>
-      {% capture day %}{{ post.date | date: "%d" }}{% endcapture %}
-      {% capture month %}{{ post.date | date: "%b" | downcase }}{% endcapture %}
-      {% capture smonth %}{% case month %}{% when 'jan' %}ja{% when 'feb' %}fe{% when 'mar' %}mr{% when 'apr' %}al{% when 'may' %}ma{% when 'jun' %}jn{% when 'jul' %}jl{% when 'aug' %}au{% when 'sep' %}se{% when 'oct' %}se{% when 'nov' %}no{% when 'dec' %}de{% endcase %}{% endcapture %}
-      {{ smonth }}{{ day }}
-    </span>
-  </h1>
-
-  {% if forloop.index <= show_count %}
-    <p>{{ post.desc}} &mdash;
-      <a href="{{ post.url }}">Read more &rarr;</a>
-    </p>
-  {% endif %}
-
+  {% unless post.draft %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a> &ndash; {{ post.date | date: "%B %d, %Y" }}</li>
+  {% endunless %}
 {% endfor %}
-    <h1><a href="archives.html">Archives</a> <span>∞</span></h1>
+</ul>
 
-  <h1 class="section">About</h1>
-  <p>Follow me on Twitter <a href="http://twitter.com/jmlacroix">@jmlacroix</a>, view my code on <a href="http://github.com/jmlacroix/">GitHub</a> or contact me at <a href="mailto:jmlacroix / gmail">jmlacroix / gmail</a>. Content licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_CA">cc by-nc-sa</a>.</p>
+</article>

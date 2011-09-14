@@ -1,38 +1,28 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <title>jmlacroix - {{ page.title }}</title>
-  <link href="/atom.xml" rel="alternate" title="jmlacroix" type="application/atom+xml" />
-
-  <!-- Homepage CSS -->
-  <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-18616544-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-</head>
-
-<body>
-
-<div class="logo">
-  <a href="/">
-    <p>jmlacroix</p>
-    <img src="/img/logo.png">
-    <p></p>
-  </a>
-</div>
-
-  {{ content }}
-
-</body>
-
-</html>
+<html lang='en'>
+  <head>
+    <meta charsets='utf-8' />
+    <link href='jmlacroix gmail' rel='author' title='Jean-Michel Lacroix' />
+    <link href='http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_CA' rel='license' title='cc-by-nc-sa' />
+    <link href='/favicon.ico' rel='shortcut icon' />
+    <link href="/css/screen.css" rel="stylesheet" />
+    <link href="/atom.xml" rel="alternate" title="jmlacroix" type="application/atom+xml" />
+    <title>jmlacroix - {{ page.title }}</title>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-18616544-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+  <body>
+    {{ content }}
+ 
+    <footer>
+      <p>Content under <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_CA">cc by-nc-sa</a></p>
+    </footer>
+  </body>
+ </html>

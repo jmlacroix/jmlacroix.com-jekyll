@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Replacing a Development VPS with Linux on OSX
+title: Replacing a Dev VPS with Linux on OSX
 desc: Using QEMU to run a lightweight background Linux VM for development.
 ---
 
@@ -28,13 +28,15 @@ Create a Qcow2 image, that can expand up to 10GB:
 
 Launch QEMU with your image attached as main hard drive and your ISO as cdrom:
 
-    $ qemu-system-x86_64 -m 512 -hda archlinux.qcow2 -cdrom archlinux.iso
+    $ qemu-system-x86_64 -m 512 -hda archlinux.qcow2 \
+                         -cdrom archlinux.iso
 
 Before shutting it down, make sure you enable the OpenSSH sever so you can log in later.
 
 To access the VM via SSH from the local machine, boot it with a network redirection:
 
-    $ qemu-system-x86_64 -m 512 -hda archlinux.qcow2 -redir tcp:2222::22
+    $ qemu-system-x86_64 -m 512 -hda archlinux.qcow2 \
+                         -redir tcp:2222::22
 
 This redirects all traffic from localhost port 2222 to VM port 22.
 
@@ -52,7 +54,8 @@ There's many ways to start the machine, I use a bash function in my `~/.bashrc` 
 
 <pre>
 <span class="Function">function</span> <span class="Function">linux {</span>
-    qemu-system-x86_64 <span class="Special">-m</span> <span class="Number">512</span> <span class="Special">-hda</span> archlinux.qcow2 <span class="Special">-redir</span> tcp:<span class="Number">2222</span>::<span class="Number">22</span> \
+    qemu-system-x86_64 <span class="Special">-m</span> <span class="Number">512</span> <span class="Special">-hda</span> archlinux.qcow2 \
+                       <span class="Special">-redir</span> tcp:<span class="Number">2222</span>::<span class="Number">22</span> \
                        <span class="Special">-nographic</span> <span class="Special">-daemonize</span>
 <span class="Function">}</span>
 </pre>
@@ -92,13 +95,14 @@ For maximum fun, setup a shared folder on your local machine that your VM can ac
 
 Have fun playing with your new development environment.
 
-<div class="footnotes">
+<section class="footnotes">
+<p>Footnotes</p>
 <ol>
-<li id="ffn1"><p>
-There seems to be a problem with the BIOS in daemon mode in QEMU 0.15 on OSX, so make sure you install version 0.14.1.<br/><pre>brew install https://raw.github.com/mxcl/homebrew/bf2dd2bea04daf78a98888cf20fdf438fb777112/\
-Library/Formula/qemu.rb</pre> <a href="#fn1" title="Jump back to footnote 1 in the text.">&#8617;</a></p></li>
+<li id="ffn1">There seems to be a problem with the BIOS in daemon mode in QEMU 0.15 on OSX, so make sure you install version 0.14.1.
+<pre>brew install https://raw.github.com/mxcl/homebrew/\
+bf2dd2bea04daf78a98888cf20fdf438fb777112/Library/Formula/qemu.rb</pre> <a href="#fn1" title="Jump back to footnote 1 in the text.">&#8617;</a></li>
 </ol>
-</div>
+</section>
 
 [brew]: http://mxcl.github.com/homebrew/
 [qemu]: http://wiki.qemu.org/Main_Page
