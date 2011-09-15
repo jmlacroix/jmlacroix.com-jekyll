@@ -79,5 +79,5 @@ Further Integration
 Currently, it's not the best way to integrate code into my posts. It's not automated and I need to manually insert the HTML. I've made an `awk` script to help with this task. I'll post about it when it's integrated into my process.
 
 
-[hi]: https://gist.github.com/662aa4e8aea8d4b4070b
-[sy]: https://gist.github.com/1ef9e5f8287cf6320d19
+[hi]: https://gist.github.com/1218309
+[sy]: https://gist.github.com/1218308
