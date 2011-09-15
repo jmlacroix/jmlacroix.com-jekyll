@@ -10,7 +10,7 @@ layout: nil
 	<id>{{ site.url }}</id>
 	<author>
 		<name>Jean-Michel Lacroix</name>
-		<email>jmlacroix@gmail.com</email>
+		<email>jmlacroix gmail</email>
 	</author>
 
 	{% for post in site.posts limit: 15 %}

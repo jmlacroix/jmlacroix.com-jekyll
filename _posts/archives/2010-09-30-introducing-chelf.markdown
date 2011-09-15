@@ -12,7 +12,7 @@ So, out of my anger I created something useful: **Chelf**, a SIMBL plugin that a
 
 Chelf adds an entry in the "Window" menu of Chrome, bound to CMD-SHIFT-X:
 
-<p style="text-align: center;"><img src="/img/chelf/menu.png"></p>
+<p style="text-align: center;"><img src="/img/chelf/menu.png" /></p>
 
 ## Installation ##
 
