@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Publishing a static website on CloudFront
-desc: Introducing some tools to help publish and maintain a Jekyll-generated static website on Amazon's CloudFront CDN.
+title: Publishing a Static Website on CloudFront
+short: cfpub
 ---
 
 My [first CloudFront article](/archives/cloudfront-hosting.html) deals with basic S3 and CloudFront setup and with the DefaultRootObject which is the key of hosting a website on Amazon's CDN.

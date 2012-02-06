@@ -1,0 +1,12 @@
+---
+layout: post
+title: Introduction à la programmation fonctionnelle avec Haskell
+short: ipfh
+draft: true
+---
+
+Survol des différentes caractéristiques des langages fonctionnels accompagné d'exemples simples avec Haskell. Présentation effectuée dans le cadre du [OpenCode][oc] 01-12-2011.
+
+<script src="http://speakerdeck.com/embed/4ed9711946f378004d000cd5.js"></script>
+
+[oc]: http://opencode.ca

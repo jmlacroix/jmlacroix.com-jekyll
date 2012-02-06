@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Hosting a static website on CloudFront
-desc: An overview of the basic Amazon Web Services configuration you need to be able to publish a static site with S3 & CloudFront.
+title: Hosting a Static Website on CloudFront
+short: cfhost
 ---
 
 I recently tried to use Amazon's CloudFront to host my static [Jekyll](http://jekyllrb.com)-generated homepage. Here's a couple of reasons I really wanted to do that:

@@ -1,8 +1,9 @@
 ---
 layout: post
-title: DRY your ssh config with rubbissh
+title: DRY your SSH Config with Rubbissh
 desc: rubbissh is a ruby script that generates a ssh config file from a YAML
       definition.
+short: rubbissh
 ---
 
 I really hate to repeat myself, and that happens way too much when managing

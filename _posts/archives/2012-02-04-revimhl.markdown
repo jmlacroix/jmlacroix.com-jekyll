@@ -1,0 +1,13 @@
+---
+layout: post
+title: Follow-up on VIM Syntax Highlight Exporting
+short: revimhl
+draft: yes
+---
+
+It has been a couple of months since I first wrote about [exporting VIM Syntax highlight][vim]. Back then, I said I would follow-up with an awk script to ease the extraction for a blogging engine, and I still haven't delivered.
+
+Well, here's the script. Hope you enjoy it.
+
+
+[vim]: /archives/export-vim-highlight.html

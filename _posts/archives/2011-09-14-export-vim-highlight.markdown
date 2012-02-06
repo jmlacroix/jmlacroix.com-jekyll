@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Exporting VIM Syntax Highlight
-desc: Using
+short: vimhl
 ---
 
 I've been looking for a tool to replace the GitHub Gists I'm using to highlight code on these pages. Gists are great, but I wanted something that doesn't rely on JavaScript (for SEO, accessibility and performance reasons).

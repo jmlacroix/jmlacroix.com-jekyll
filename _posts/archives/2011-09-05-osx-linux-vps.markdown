@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Replacing a Dev VPS with Linux on OSX
-desc: Using QEMU to run a lightweight background Linux VM for development.
+short: osxvps
 ---
 
 *Update: For a great discussion on the topic, see the [Hacker News discussion page][HN].*

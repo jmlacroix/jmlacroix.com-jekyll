@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Let me introduce my Chelf
-desc: Chelf is a SIMBL plugin that adds a keyboard shortcut to close the download shelf in Google Chrome.
+title: Let me Introduce my Chelf
+short: chelf
 ---
 
 Like most geeks, I *really* love keyboard shortcuts and I tend to use them a lot more than my mouse.
