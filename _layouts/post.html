@@ -5,9 +5,13 @@ layout: default
 <article>
 <header>
   <h1>{{ page.title }}</h1>
-  <time datetime="{{ page.date | date_to_xmlschema }}" pubdate="pubdate">{{ page.date | date: "%B %d, %Y" }}</time>
 </header>
 
 {{ content }}
 
 </article>
+ 
+<footer>
+  <a href="/">Jean-Michel Lacroix</a> &ndash;
+  <time datetime="{{ page.date | date_to_xmlschema }}" pubdate="pubdate">{{ page.date | date: "%B %d, %Y" }}</time>
+</footer>

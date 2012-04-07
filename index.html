@@ -6,27 +6,16 @@ title: homepage
 <article>
 <header>
   <h1>Jean-Michel Lacroix</h1>
-  <time datetime="2009-10-22" pubdate="pubdate">Welcome!</time>
 </header>
 
 <p>Generalist programmer with a strong interest in products, user experience and technologies (web, mobile, cloud, languages, systems).</p>
-
-<h2>Online</h2>
-
-<p style="margin-left: 1em">
-  <a href="mailto:&nbsp;j&nbsp;e&nbsp;&#64;&nbsp;n&nbsp;&#45;m&nbsp;i&nbsp;&#46;&nbsp;c&nbsp;h">Email</a>,
-  <a href="http://twitter.com/jmlacroix">Twitter</a>,
-  <a href="http://github.com/jmlacroix">Github</a>,
-  <a href="http://linkedin.com/in/jmlacroix">Linked In</a>,
-  <a href="http://speakerdeck.com/u/jmlacroix">Speaker Deck</a>
-</p>
 
 <h2>Articles</h2>
 
 <ul>
 {% for post in site.posts %}
   {% unless post.draft %}
-  <li><a href="{{ post.url }}">{{ post.title }}</a> &ndash; {{ post.date | date: "%B %d, %Y" }}</li>
+  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endunless %}
 {% endfor %}
 </ul>
@@ -35,9 +24,19 @@ title: homepage
 
 <ul>
 <li>
-  <a href="/archives/ipfh.html">Introduction à la programmation fonctionnelle avec Haskell</a><br/>
-  OpenCode Québec - December 1, 2011
+  <a href="/archives/ipfh.html">Introduction à la programmation fonctionnelle avec Haskell</a>
 </li>
 </ul>
+
+<h2>Online</h2>
+
+<p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="mailto:&nbsp;j&nbsp;e&nbsp;&#64;&nbsp;n&nbsp;&#45;m&nbsp;i&nbsp;&#46;&nbsp;c&nbsp;h">Email</a>,
+  <a href="http://twitter.com/jmlacroix">Twitter</a>,
+  <a href="http://github.com/jmlacroix">Github</a>,
+  <a href="http://linkedin.com/in/jmlacroix">Linked In</a>,
+  <a href="http://speakerdeck.com/u/jmlacroix">Speaker Deck</a>
+</p>
 
 </article>
