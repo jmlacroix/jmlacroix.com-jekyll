@@ -49,6 +49,11 @@ a:hover {
 	text-decoration: underline;
 }
 
+p a.src {
+	float: right;
+	margin: 0.5em 0 0 -3em;
+}
+
 /* TODO: update */
 .footnotes {
 	margin-top: 3em;

@@ -60,7 +60,81 @@ Since there's no support (yet) in the AWS Console to set the DefaultRootObject (
 
 Here's the code:
 
-<script src="http://gist.github.com/591196.js"> </script>
+<p><a class="src" href="https://gist.github.com/591196">#</a></p>
+
+<pre>
+<span class="PreProc">require</span> <span class="Special">'</span><span class="String">rubygems</span><span class="Special">'</span>
+<span class="PreProc">require</span> <span class="Special">'</span><span class="String">hmac-sha1</span><span class="Special">'</span>
+<span class="PreProc">require</span> <span class="Special">'</span><span class="String">net/https</span><span class="Special">'</span>
+<span class="PreProc">require</span> <span class="Special">'</span><span class="String">base64</span><span class="Special">'</span>
+
+s3_access=<span class="Special">'</span><span class="String">S3_ACCESS_KEY</span><span class="Special">'</span>
+s3_secret=<span class="Special">'</span><span class="String">S3_SECRET_KEY</span><span class="Special">'</span>
+cf_distribution=<span class="Special">'</span><span class="String">CLOUDFRONT_DISTRIBUTION_ID</span><span class="Special">'</span>
+
+newobj = <span class="Identifier">ARGV</span>[<span class="Constant">0</span>]
+
+<span class="Statement">if</span> newobj == <span class="Constant">nil</span>
+  puts <span class="Special">&quot;</span><span class="String">usage: aws_cf_setroot.rb index.html</span><span class="Special">&quot;</span>
+  <span class="Statement">exit</span>
+<span class="Statement">end</span>
+
+date = <span class="Type">Time</span>.now.utc
+date = date.strftime(<span class="Special">&quot;</span><span class="String">%a, %d %b %Y %H:%M:%S %Z</span><span class="Special">&quot;</span>)
+digest = <span class="Type">HMAC</span>::<span class="Type">SHA1</span>.new(s3_secret)
+digest &lt;&lt; date
+
+uri = <span class="Type">URI</span>.parse(<span class="Special">'</span><span class="String"><a href="https://cloudfront.amazonaws.com/2010-08-01/distribution/">https://cloudfront.amazonaws.com/2010-08-01/distribution/</a></span><span class="Special">'</span> + cf_distribution + <span class="Special">'</span><span class="String">/config</span><span class="Special">'</span>)
+
+req = <span class="Type">Net</span>::<span class="Type">HTTP</span>::<span class="Type">Get</span>.new(uri.path)
+
+req.initialize_http_header({
+  <span class="Special">'</span><span class="String">x-amz-date</span><span class="Special">'</span> =&gt; date,
+  <span class="Special">'</span><span class="String">Content-Type</span><span class="Special">'</span> =&gt; <span class="Special">'</span><span class="String">text/xml</span><span class="Special">'</span>,
+  <span class="Special">'</span><span class="String">Authorization</span><span class="Special">'</span> =&gt; <span class="Special">&quot;</span><span class="String">AWS %s:%s</span><span class="Special">&quot;</span> % [s3_access, <span class="Type">Base64</span>.encode64(digest.digest)]
+})
+
+http = <span class="Type">Net</span>::<span class="Type">HTTP</span>.new(uri.host, uri.port)
+http.use_ssl = <span class="Boolean">true</span>
+http.verify_mode = <span class="Type">OpenSSL</span>::<span class="Type">SSL</span>::<span class="Type">VERIFY_NONE</span>
+res = http.request(req)
+
+currentobj = <span class="Special">/</span><span class="String">&lt;DefaultRootObject&gt;</span><span class="Special">(</span><span class="Special">.</span><span class="Special">*?</span><span class="Special">)</span><span class="String">&lt;</span><span class="Special">\/</span><span class="String">DefaultRootObject&gt;</span><span class="Special">/</span>.match(res.body)[<span class="Constant">1</span>]
+
+<span class="Statement">if</span> newobj == currentobj
+  puts <span class="Special">&quot;</span><span class="String">'</span><span class="Special">#{</span>currentobj<span class="Special">}</span><span class="String">' is already the DefaultRootObject</span><span class="Special">&quot;</span>
+  <span class="Statement">exit</span>
+<span class="Statement">end</span>
+
+etag = res.header[<span class="Special">'</span><span class="String">etag</span><span class="Special">'</span>]
+
+req = <span class="Type">Net</span>::<span class="Type">HTTP</span>::<span class="Type">Put</span>.new(uri.path)
+
+req.initialize_http_header({
+  <span class="Special">'</span><span class="String">x-amz-date</span><span class="Special">'</span> =&gt; date,
+  <span class="Special">'</span><span class="String">Content-Type</span><span class="Special">'</span> =&gt; <span class="Special">'</span><span class="String">text/xml</span><span class="Special">'</span>,
+  <span class="Special">'</span><span class="String">Authorization</span><span class="Special">'</span> =&gt; <span class="Special">&quot;</span><span class="String">AWS %s:%s</span><span class="Special">&quot;</span> % [s3_access, <span class="Type">Base64</span>.encode64(digest.digest)],
+  <span class="Special">'</span><span class="String">If-Match</span><span class="Special">'</span> =&gt; etag
+})
+
+<span class="Statement">if</span> currentobj == <span class="Constant">nil</span>
+  regex = <span class="Special">/</span><span class="String">&lt;</span><span class="Special">\/</span><span class="String">DistributionConfig&gt;</span><span class="Special">/</span>
+  replace = <span class="Special">&quot;</span><span class="String">&lt;DefaultRootObject&gt;</span><span class="Special">#{</span>newobj<span class="Special">}</span><span class="String">&lt;/DefaultRootObject&gt;&lt;/DistributionConfig&gt;</span><span class="Special">&quot;</span>
+<span class="Statement">else</span>
+  regex = <span class="Special">/</span><span class="String">&lt;DefaultRootObject&gt;</span><span class="Special">(</span><span class="Special">.</span><span class="Special">*?</span><span class="Special">)</span><span class="String">&lt;</span><span class="Special">\/</span><span class="String">DefaultRootObject&gt;</span><span class="Special">/</span>
+  replace = <span class="Special">&quot;</span><span class="String">&lt;DefaultRootObject&gt;</span><span class="Special">#{</span>newobj<span class="Special">}</span><span class="String">&lt;/DefaultRootObject&gt;</span><span class="Special">&quot;</span>
+<span class="Statement">end</span>
+
+req.body = res.body.gsub(regex, replace)
+
+http = <span class="Type">Net</span>::<span class="Type">HTTP</span>.new(uri.host, uri.port)
+http.use_ssl = <span class="Boolean">true</span>
+http.verify_mode = <span class="Type">OpenSSL</span>::<span class="Type">SSL</span>::<span class="Type">VERIFY_NONE</span>
+res = http.request(req)
+
+puts res.code
+puts res.body
+</pre>
 
 You need to edit 3 configuration lines at the top of the file:
 
