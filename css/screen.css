@@ -19,7 +19,7 @@ p {
 }
 
 p, pre, ul li, ol li {
-	line-height: 1.3em;
+	line-height: 1.4em;
 }
 
 pre {
@@ -119,6 +119,12 @@ body {
 }
 }
 
+/* iphone an ipad */
+@media only screen and (max-device-width: 1024px) {
+p, pre, ul li, ol li {
+	line-height: 1.3em;
+}
+}
 
 /* syntax highlight */
 
