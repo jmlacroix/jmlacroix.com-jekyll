@@ -14,7 +14,9 @@ So instead of using simple tools, I went for the complicated solution. I made tw
 Converting to HTML
 ------------------
 
-[`highlight.sh`][hi] outputs HTML-formatted syntax highlight of a file:
+`highlight.sh` outputs HTML-formatted syntax highlight of a file:
+
+<p><a class="src" href="https://gist.github.com/1218309">#</a></p>
 
 <pre>
 <span class="Comment">#/bin/bash</span>
@@ -51,7 +53,9 @@ Try the script on itself:
 Extracting CSS
 --------------
 
-[`syntax.sh`][sy] loads VIM's syntax test and outputs its generated CSS styles:
+`syntax.sh` loads VIM's syntax test and outputs its generated CSS styles:
+
+<p><a class="src" href="https://gist.github.com/1218308">#</a></p>
 
 <pre>
 <span class="Comment">#!/bin/bash</span>
@@ -77,7 +81,3 @@ Further Integration
 -------------------
 
 Currently, it's not the best way to integrate code into my posts. It's not automated and I need to manually insert the HTML. I've made an `awk` script to help with this task. I'll post about it when it's integrated into my process.
-
-
-[hi]: https://gist.github.com/1218309
-[sy]: https://gist.github.com/1218308
