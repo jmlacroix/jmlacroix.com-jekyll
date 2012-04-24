@@ -1,21 +1,40 @@
 body {
 	width: 33em;
 	margin: auto;
+	padding: 1em 0 1em 0;
 }
 
 h1 {
-	margin-top: 1em;
+	margin: 0.5em 0;
 	font-size: 180%;
 	font-weight: normal;
 }
 
 h2 {
+	margin-top: 1em;
 	font-size: 100%;
-	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+}
+
+h2 + p {
+	margin-top: 0em !important;
+}
+
+ul, ol {
+	margin-top: 0em !important;
+}
+
+pre + h2 {
+	margin-top: 1.2em;
 }
 
 p {
 	text-align: justify;
+	margin: 0.8em 0 0.3em 0;
+}
+
+p.online {
+	margin-left: 1.6em;
 }
 
 p, pre, ul li, ol li {
@@ -24,15 +43,15 @@ p, pre, ul li, ol li {
 
 pre {
 	overflow: auto;
-	margin: 0 0 2em 1em;
-	padding: 0.2em 1.3em;
+	margin-left: 1em;
+	padding: 0.2em 0.2em 0.2em 1em;
 	border-left: 3px solid #e0e0e0;
 }
 
 footer {
 	font-size: 95%;
 	text-align: right;
-	margin: 2em 0 1em;
+	margin: 1.5em 0 1em 0;
 }
 
 a {
@@ -43,13 +62,14 @@ a:hover {
 	text-decoration: underline;
 }
 
-p a.src {
+a.src {
 	float: left;
 	margin-left: -0.5em;
 }
 
 /* TODO: update */
 .footnotes {
+	border-top: 1px solid #e0e0e0;
 	margin-top: 2em;
 	font-size: 90%;
 }
@@ -59,34 +79,41 @@ p a.src {
 }
 
 .footnotes ol li {
-	line-height: 1.4em;
 	margin-bottom: 0.5em;
 }
 
-.footnotes p {
-	font-weight: bold;
+.footnotes pre {
+	margin: 0;
 }
 
 /* iphone */
 @media only screen and (max-device-width: 480px) {
 body {
 	width: 95%;
+	padding-top: 0.2em;
+	padding-bottom: 0em;
 }
 
 h1 {
-	margin-top: 0.2em;
+	margin-top: 0;
 }
 
 pre {
-	overflow: auto;
-	margin: 0 0 2em 0.5em;
-	padding: 0.2em 0.5em;
-	border-left: 2px solid #e0e0e0;
+	margin-left: 0.5em;
+	padding-left: 0.5em;
+	border-left-width: 2px;
+}
+
+p.online {
+	margin-left: 0.3em !important;
 }
 
 p a.src {
-	float: left;
 	margin-left: -0.5em;
+}
+
+ol, ul {
+	padding-left: 1.6em;
 }
 }
 
