@@ -2,6 +2,7 @@
 layout: post
 title: Hosting a Static Website on CloudFront
 short: cfhost
+nofoot: true
 ---
 
 I recently tried to use Amazon's CloudFront to host my static [Jekyll](http://jekyllrb.com)-generated homepage. Here's a couple of reasons I really wanted to do that:
@@ -148,15 +149,18 @@ You are now ready to set your DefaultRootObject by running the script with the n
 
 index.html is now the default root object (meaning it won't work for subfolders). There may be a small delay before it works, but if you go to yourdomain.com in a web browser, you should be shown your default index.html page.
 
+<footer>
+  <a href="/">Jean-Michel Lacroix</a> &ndash;
+  <time datetime="{{ page.date | date_to_xmlschema }}" pubdate="pubdate">{{ page.date | date: "%B %d, %Y" }}</time>
+</footer>
 
-<div class="footnotes">
-<p>Footnotes</p>
+<section class="footnotes">
 <ol>
 <li id="ffn1">That could be fixed with a second bucket with the exact same html files that meta refreshes the page to the correct URL. That's overkill, but it should be good enough for basic SEO. <a href="#fn1" title="Jump back to footnote 1 in the text.">&#8617;</a></li>
 <li id="ffn2">You could skip this step, but you need to make sure you override the ACLs every time you update your site. <a href="#fn2" title="Jump back to footnote 2 in the text.">&#8617;</a></li>
 <li id="ffn3">Not all DNS providers can do that. I'm currently using namecheap.com which allows it. <a href="#fn3" title="Jump back to footnote 3 in the text.">&#8617;</a></li>
 </ol>
-</div>
+</section>
 
 [1]: #ffn1
 [2]: #ffn2

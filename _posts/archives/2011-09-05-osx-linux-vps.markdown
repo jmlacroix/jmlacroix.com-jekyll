@@ -2,6 +2,7 @@
 layout: post
 title: Replacing a Dev VPS with Linux on OSX
 short: osxvps
+nofoot: true
 ---
 
 *Update: For a great discussion on the topic, see the [Hacker News discussion page][HN].*
@@ -95,14 +96,18 @@ For maximum fun, setup a shared folder on your local machine that your VM can ac
 
 Have fun playing with your new development environment.
 
-<div class="footnotes">
-<p>Footnotes</p>
+<footer>
+  <a href="/">Jean-Michel Lacroix</a> &ndash;
+  <time datetime="{{ page.date | date_to_xmlschema }}" pubdate="pubdate">{{ page.date | date: "%B %d, %Y" }}</time>
+</footer>
+
+<section class="footnotes">
 <ol>
-<li id="ffn1">There seems to be a problem with the BIOS in daemon mode in QEMU 0.15 on OSX, so make sure you install version 0.14.1.
+<li id="ffn1">There seems to be a problem with the BIOS in daemon mode in QEMU 0.15 on OSX, so make sure you install version 0.14.1. <a href="#fn1" title="Jump back to footnote 1 in the text.">&#8617;</a><br/>
 <pre>brew install https://raw.github.com/mxcl/homebrew/\
-bf2dd2bea04daf78a98888cf20fdf438fb777112/Library/Formula/qemu.rb</pre> <a href="#fn1" title="Jump back to footnote 1 in the text.">&#8617;</a></li>
+bf2dd2bea04daf78a98888cf20fdf438fb777112/Library/Formula/qemu.rb</pre></li>
 </ol>
-</div>
+</section>
 
 [brew]: http://mxcl.github.com/homebrew/
 [qemu]: http://wiki.qemu.org/Main_Page

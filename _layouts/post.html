@@ -11,7 +11,9 @@ layout: default
 
 </article>
  
+{% unless page.nofoot %}
 <footer>
   <a href="/">Jean-Michel Lacroix</a> &ndash;
   <time datetime="{{ page.date | date_to_xmlschema }}" pubdate="pubdate">{{ page.date | date: "%B %d, %Y" }}</time>
 </footer>
+{% endunless %}
