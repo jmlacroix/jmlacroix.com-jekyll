@@ -1,16 +1,13 @@
 ---
-layout: default
-title: jmlacroix
+layout: post
+title: Jean-Michel Lacroix
+nofoot: true
 ---
 
-<article>
-<header>
-  <h1>Jean-Michel Lacroix</h1>
-</header>
+Generalist programmer with a strong interest in products, user experience and technologies (web, mobile, cloud, languages, systems).
 
-<p>Generalist programmer with a strong interest in products, user experience and technologies (web, mobile, cloud, languages, systems).</p>
-
-<h2>Articles</h2>
+Articles
+--------
 
 <ul>
 {% for post in site.posts %}
@@ -20,15 +17,13 @@ title: jmlacroix
 {% endfor %}
 </ul>
 
-<h2>Talks</h2>
+Talks
+-----
 
-<ul>
-<li>
-  <a href="/archives/ipfh.html">Introduction à la programmation fonctionnelle avec Haskell</a>
-</li>
-</ul>
+ - <a href="/archives/ipfh.html">Introduction à la programmation fonctionnelle avec Haskell</a>
 
-<h2>Online</h2>
+Online
+------
 
 <p class="online">
   <a href="mailto:&nbsp;j&nbsp;e&nbsp;&#64;&nbsp;n&nbsp;&#45;m&nbsp;i&nbsp;&#46;&nbsp;c&nbsp;h">Email</a>,
@@ -37,5 +32,3 @@ title: jmlacroix
   <a href="http://linkedin.com/in/jmlacroix">Linked In</a>,
   <a href="http://speakerdeck.com/u/jmlacroix">Speaker Deck</a>
 </p>
-
-</article>
