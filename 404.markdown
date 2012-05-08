@@ -1,0 +1,9 @@
+---
+layout: post
+title: Page not found
+nodate: true
+---
+
+The 404 or Not Found error message is a HTTP standard response code indicating that the client was able to communicate with the server, but the server could not find what was requested.
+
+Source: <a href="https://en.wikipedia.org/wiki/HTTP_404">Wikipedia</a>.
