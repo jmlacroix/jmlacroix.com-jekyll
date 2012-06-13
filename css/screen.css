@@ -1,57 +1,9 @@
 body {
-	width: 33em;
+	max-width: 30em;
 	margin: auto;
 	padding: 1em 0 1em 0;
-}
-
-h1 {
-	margin: 0.5em 0;
-	font-size: 180%;
-	font-weight: normal;
-}
-
-h2 {
-	margin-top: 1em;
-	font-size: 100%;
-	margin-bottom: 0.5em;
-}
-
-h2 + p {
-	margin-top: 0em !important;
-}
-
-ul, ol {
-	margin-top: 0em !important;
-}
-
-pre + h2 {
-	margin-top: 1.2em;
-}
-
-p {
-	text-align: justify;
-	margin: 0.8em 0 0.3em 0;
-}
-
-p.online {
-	margin-left: 1.6em;
-}
-
-p, pre, ul li, ol li {
-	line-height: 1.4em;
-}
-
-pre {
-	overflow: auto;
-	margin-left: 1em;
-	padding: 0.2em 0.2em 0.2em 1em;
-	border-left: 3px solid #e0e0e0;
-}
-
-footer {
-	font-size: 95%;
-	text-align: right;
-	margin: 1.5em 0 1em 0;
+	background-color: #fcfcfc;
+	font: 12pt/1.5em Helvetica neue, Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -62,24 +14,56 @@ a:hover {
 	text-decoration: underline;
 }
 
-a.src {
-	float: left;
-	margin-left: -0.5em;
+header {
+	margin-bottom: 1.5em;
+}
+
+header h1 {
+	margin: 1em 0 0 0;
+	font-size: 160%;
+	text-transform: uppercase;
+}
+
+header p {
+	font-size: 80%;
+}
+
+header p a {
+	font-size: 120%;
+	font-weight: bold;
+}
+
+article h2 {
+	margin-top: 1.5em;
+	font-size: 110%;
+}
+
+article ul, ol {
+	margin-top: 0em;
+}
+
+article pre {
+	overflow: auto;
+	padding: 1em;
+	border: 2px solid #f0f0f0;
+	background-color: #f8f8f8;
+	font-size: 80%;
+}
+
+article pre,
+article code {
+	font-family: Menlo, Consolas, monospace;
 }
 
 /* TODO: update */
 .footnotes {
 	border-top: 1px solid #e0e0e0;
 	margin-top: 2em;
-	font-size: 90%;
+	font-size: 95%;
 }
 
 .footnotes ol {
 	padding-left: 1.3em;
-}
-
-.footnotes ol li {
-	margin-bottom: 0.5em;
 }
 
 .footnotes pre {
@@ -89,27 +73,8 @@ a.src {
 /* iphone */
 @media only screen and (max-device-width: 480px) {
 body {
-	width: 95%;
-	padding-top: 0.2em;
-	padding-bottom: 0em;
-}
-
-h1 {
-	margin-top: 0;
-}
-
-pre {
-	margin-left: 0.5em;
-	padding-left: 0.5em;
-	border-left-width: 2px;
-}
-
-p.online {
-	margin-left: 0.3em !important;
-}
-
-p a.src {
-	margin-left: -0.5em;
+	max-width: 95%;
+	padding: 0;
 }
 
 ol, ul {
@@ -120,10 +85,6 @@ ol, ul {
 @media only screen and (max-device-width: 480px) and (orientation:portrait) {
 body {
 	font-size: 100% !important;
-}
-
-p {
-	text-align: left !important;
 }
 }
 

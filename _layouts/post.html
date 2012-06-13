@@ -5,19 +5,19 @@ layout: default
 <article>
 <header>
   <h1>{{ page.title }}</h1>
+  {% unless page.nofoot %}
+  <p>
+    by <a href="/">Jean-Michel Lacroix</a> on 
+  {% if page.nodate %}
+  <time datetime="1970-01-01T00:00:00ZOMG" pubdate="pubdate">January 1st, 1970</time>
+  {% else %}
+  <time datetime="{{ page.date | date_to_xmlschema }}" pubdate="pubdate">{{ page.date | date: "%B %d, %Y" }}</time>
+  {% endif %}
+  </p>
+  {% endunless %}
 </header>
 
 {{ content }}
 
 </article>
  
-{% unless page.nofoot %}
-<footer>
-  <a href="/">Jean-Michel Lacroix</a> &ndash;
-  {% if page.nodate %}
-  <time datetime="1970-01-01T00:00:00ZOMG" pubdate="pubdate">January 1st, 1970</time>
-  {% else %}
-  <time datetime="{{ page.date | date_to_xmlschema }}" pubdate="pubdate">{{ page.date | date: "%B %d, %Y" }}</time>
-  {% endif %}
-</footer>
-{% endunless %}
