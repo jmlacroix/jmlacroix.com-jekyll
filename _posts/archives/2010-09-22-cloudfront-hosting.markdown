@@ -61,8 +61,6 @@ Since there's no support (yet) in the AWS Console to set the DefaultRootObject (
 
 Here's the code:
 
-<p><a class="src" href="https://gist.github.com/591196">#</a></p>
-
 <pre>
 <span class="PreProc">require</span> <span class="Special">'</span><span class="String">rubygems</span><span class="Special">'</span>
 <span class="PreProc">require</span> <span class="Special">'</span><span class="String">hmac-sha1</span><span class="Special">'</span>

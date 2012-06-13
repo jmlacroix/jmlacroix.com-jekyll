@@ -9,5 +9,4 @@ It has been a couple of months since I first wrote about [exporting VIM Syntax h
 
 Well, here's the script. Hope you enjoy it.
 
-
 [vim]: /archives/export-vim-highlight.html

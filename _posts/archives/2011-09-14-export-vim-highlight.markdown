@@ -16,8 +16,6 @@ Converting to HTML
 
 `highlight.sh` outputs HTML-formatted syntax highlight of a file:
 
-<p><a class="src" href="https://gist.github.com/1218309">#</a></p>
-
 <pre>
 <span class="Comment">#/bin/bash</span>
 
@@ -54,8 +52,6 @@ Extracting CSS
 --------------
 
 `syntax.sh` loads VIM's syntax test and outputs its generated CSS styles:
-
-<p><a class="src" href="https://gist.github.com/1218308">#</a></p>
 
 <pre>
 <span class="Comment">#!/bin/bash</span>

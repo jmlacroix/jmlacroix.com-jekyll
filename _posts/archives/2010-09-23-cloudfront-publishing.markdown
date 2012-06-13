@@ -12,8 +12,6 @@ This second post focuses about getting your website *on* CloudFront by providing
 
 First of all, here's my simple Rakefile. Don't try to use it yet, there's a lot of stuff missing.
 
-<p><a class="src" href="https://gist.github.com/592988?file=Rakefile#file_rakefile">#</a></p>
-
 <pre>
 task <span class="Constant">:default</span> =&gt; <span class="Constant">:server</span>
 
@@ -52,8 +50,6 @@ The publish task is the only one I'll talk about, since the two others are reall
 ## Directory synchronization
 
 I've written a script that wraps the [s3cmd](http://s3tools.org/) "sync" command with an invalidation tool to help with updates:
-
-<p><a class="src" href="http://gist.github.com/592941">#</a></p>
 
 <pre>
 local   = <span class="Identifier">ARGV</span>[<span class="Constant">0</span>]
@@ -98,8 +94,6 @@ To run this script, s3cmd has to be installed. On OSX, you can do so easily with
 
 Now, create an s3.config file (God I hate these) with the *s3cmd --configure* command or copy the following configuration. Don't forget to set your own AWS credentials (rows #2,3).
 
-<p><a class="src" href="https://gist.github.com/592988#file_s3.config">#</a></p>
-
 <pre>
 [default]
 access_key = S3_ACCESS_KEY
@@ -143,8 +137,6 @@ You can test your s3cmd configuration by typing this command to list all your bu
 ## Cache invalidation
 
 The sync script invalidates the cache of the published objects by calling this script:
-
-<p><a class="src" href="https://gist.github.com/589132">#</a></p>
 
 <pre>
 <span class="PreProc">require</span> <span class="Special">'</span><span class="String">rubygems</span><span class="Special">'</span>

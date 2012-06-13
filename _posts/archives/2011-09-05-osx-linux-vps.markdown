@@ -2,7 +2,6 @@
 layout: post
 title: Replacing a Dev VPS with Linux on OSX
 short: osxvps
-nofoot: true
 ---
 
 *Update: For a great discussion on the topic, see the [Hacker News discussion page][HN].*
@@ -95,11 +94,6 @@ and
 For maximum fun, setup a shared folder on your local machine that your VM can access for easier file sharing. It's also a good idea to make a backup copy of your stable image so that you can replace a broken VM by a clean new one.
 
 Have fun playing with your new development environment.
-
-<footer>
-  <a href="/">Jean-Michel Lacroix</a> &ndash;
-  <time datetime="{{ page.date | date_to_xmlschema }}" pubdate="pubdate">{{ page.date | date: "%B %d, %Y" }}</time>
-</footer>
 
 <section class="footnotes">
 <ol>
