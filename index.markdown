@@ -4,7 +4,7 @@ title: Jean-Michel Lacroix
 nofoot: true
 ---
 
-Full-stack developer with a strong interest in products, user experience and technologies (web, mobile, cloud, languages, systems).
+Full-stack developer interested in products, user experience and simplicity; cloud computing, distributed systems and scalability.
 
 <a href="mailto:&nbsp;j&nbsp;e&nbsp;&#64;&nbsp;n&nbsp;&#45;m&nbsp;i&nbsp;&#46;&nbsp;c&nbsp;h">Email</a>,
 [Twitter](http://twitter.com/jmlacroix),
